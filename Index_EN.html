@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+	<head>
+    	<meta charset="gb2312" />
+        <title>METERIOT 1.0 USER GUIDE</title>
+        <link type="text/css" href="css/METERIOT.main.css" rel="stylesheet" />
+        <link type="text/css" href="css/METERIOT.icons.css" rel="stylesheet" />
+        
+        <script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script -->
+		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.js"></script -->
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.min.js"></script -->
+        <script src="js/METERIOTController.core.js"></script>
+ 		<meta name="author" content="秋风" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+	</head>
+    <body class="theme-color-black has-navbar-top scrollbar-dark">
+    	<navbar class="navbar-fixed-top theme-color-black">
+        	<navicon></navicon>
+            <div class="row navbar-row">
+            	<div class="container">
+                	<div class="col col-navbar col-navbrand">
+                    	METERIOT
+                    </div>
+                    <div class="col col-navbar col-navbar-current">
+                    	METERIOT GUIDE
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="Animate_EN.html">METERIOT ANIMATION</a>
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="METERIOT.zip" target="_blank">Download</a>
+                    </div>
+                    <div class="col col-navbar col-navbar-right">
+                    	<a href="http://www.xsyds.cn/Display_Eng.php">&lt;Go Back To BAT</a>
+                    </div>
+                </div>
+            </div>
+        </navbar>
+        <p class="notice">Hi, welcome to meteroiod world!</p>
+        <div class="container-fluid theme-color-orange">
+        	<div class="container">
+            	<h3>Meteroiod Trap [METERIOT]</h3>
+                <p>To make the pages below BAT unified, and have some art style, we need a modern and easy way to build websites</p>
+                <p>Meteroiod trap(METERIOT) realised this</p>
+                <p>What made it so special include:</p>
+                <p>1.Give the archer that does not have a link a javascript:void(0); link to make sure it is combined to one part</p>
+                <p>2.Give all the devices support, ranges from 0px to 1600px(Including mobile phones, tablets, computers, bigscreen computers)</p>
+                <p>3.Give some special elements a active support, which will support their click(), scroll() events. This is not just a thing help you build layouts, but also help you build up functions</p>
+                <p>4.Give the site an active loading wrapper page</p>
+                <p>And now, METEROIT is open-sourced, but please notice that you have limited rights both on commercial use and editing.</p>
+            </div>
+        </div>
+    	<div class="container-fluid theme-color-orange">
+        <div class="container">
+        	<p>Your rights include:</p>
+            <p>1.Edit, view this source code while studying</p>
+            <p>2.Use this product to build your sites while studying</p>
+            <p>Your rights don't include:</p>
+            <p>1.Change its source code and put it in the internet</p>
+            <p>2.for commercial use, unless you have signed a agreement with us</p>
+            <br />
+            <p><b>Extra noticement:</b></p>
+            <p><b>Any kind of changing its source code and publish will be look into your responsibilities</b></p>
+            <p><b>You can publish the not-edited source code on the internet, but please show where it has been from</b></p>
+        </div>
+        </div>
+        <div class="container-fluid theme-color-blue-primary">
+        	<div class="container">
+        	<h5>Product Information</h5>
+           	<div class="row">
+            	<div class="col col-sscomp-4 col-comp-3">
+                	<p>Author</p>
+                    <p>Windy</p>
+                </div>
+                <div class="col col-sscomp-4 col-comp-3">
+                	<p>Version Information</p>
+                	<p>1.122.0001[Loading Page Optimization]</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+        	<h4>METERIOT GUIDE</h4>
+        	<p>To use METERIOT,Please add following codes in your <code>&lt;head&gt;</code> tag:</p>
+        	<pre class="code">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+&lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;</pre>
+			<p>This means that: tell the mobile phone to give the actual width of the phone, and tell the Internet Explorer to render as EDGE MODE</p>
+			<p>Also, to include METERIOT, add following code to <code>&lt;head&gt;</code> tag</p>
+			<pre class="code">
+&lt;script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/METERIOTController.core.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" href="css/METERIOT.main.css" rel="stylesheet" /&gt;
+&lt;link type="text/css" href="css/METERIOT.icons.css" rel="stylesheet" /&gt;</pre>
+        	<p>Please notice that the order of the code cannot be changed, because we need JQuery first.</p>
+            <br />
+            <h4>TABLE DISPLAY SYSTEM</h4>
+            <p>METERIOT Supports a tech-leading autosize and convenient layout</p>
+            <p>Use<code>uss</code>,<code>mp</code>,<code>sscomp</code>,<code>comp</code>,<code>bscomp</code> can easily classify your device type, and give a specific size for all</p>
+        	<div class="container-fluid">
+            	<div class="row">
+                	<div class="col col-sscomp-2">TYPE</div>
+                	<div class="col col-sscomp-2">uss</div>
+                	<div class="col col-sscomp-2">mp</div>
+                	<div class="col col-sscomp-2">sscomp</div>
+                	<div class="col col-sscomp-2">comp</div>
+                	<div class="col col-sscomp-2">bscomp</div>
+                </div>
+                <div class="row">
+                	<div class="col col-sscomp-2">SIZE</div>
+                    <div class="col col-sscomp-2">0px - 200px</div>
+                    <div class="col col-sscomp-2">201px - 900px</div>
+                    <div class="col col-sscomp-2">901px - 1500px</div>
+                    <div class="col col-sscomp-2">1501px - 1800px</div>
+                    <div class="col col-sscomp-2"> &gt;= 1800px</div>
+                </div>
+                <div class="row">
+                	<div class="col col-sscomp-2">DESCRIPTION</div>
+                    <div class="col col-sscomp-2">Unknown super small</div>
+                    <div class="col col-sscomp-2">Mobile phone</div>
+                    <div class="col col-sscomp-2">Small Screen Computer</div>
+                    <div class="col col-sscomp-2">Computer</div>
+                    <div class="col col-sscomp-2">Big Screen Computer</div>
+                </div>
+            </div>
+        <p>We use <code>.row</code> as one line, also use <code>.col</code> as one column</p>
+        <p>To give a specific width, use the class <code>.col-TYPE-WIDTH</code></p>
+        <p>WIDTH is the integers between 1 to 12, and use 12 means to give a full size(100%)</p>
+        <p>TYPE is from <code>uss</code>,<code>mp</code>,<code>sscomp</code>,<code>comp</code>,<code>bscomp</code></p>
+        <p class="notice">We suggest you to add a container outside the row to autosize the inner width</p>
+        <h6>Example:</h6>
+        <pre class="code">
+        &lt;div class="container"&gt;
+        	&lt;div class="row"&gt;
+            	&lt;div class="col col-mp-12 col-comp-6 theme-color-blue-primary" style="height:40px;"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</pre>
+        <p>What you will see from the example:</p>
+        	<div class="row">
+            	<div class="col col-mp-12 col-comp-6 theme-color-blue-primary" style="height:40px;">
+                </div>
+            </div>
+        <p>If you are using computer, you will find a bar that has only half of the screen's width, but if you are using mobile phone or tablet, you will see the bar is full width.</p>
+        <br />
+        <h4>Cover - Unique Whole-Screen Display Board</h4>
+        <p>Using Cover, you can give users a compatable feeling and a huge attraction, cover is usually in the main page, and we support nesting in the cover</p>
+        <p>Notice:METERIOT's COVER has default to let its inner elements to be center-aligned, but to let it be free to users, you need to use <code>.text-all-center</code> when you are nesting</p>
+        <p>Also, if you want to use <code>.row</code> directly in <code>.cover</code>, we suggest you to put a <code>.inner</code> outside the <code>.row</code></p>
+        <p>The basic code structure:</p>
+        <pre class="code">
+&lt;div class="cover"&gt;
+	&lt;div class="inner inner-top"&gt;
+		<note>&lt;!-- Top Texts --&gt;</note>
+	&lt;/div&gt;
+	&lt;div class="inner"&gt;
+		<note>&lt;!-- centered texts --&gt;</note>
+	&lt;/div&gt;
+	&lt;div class="inner inner-bottom"&gt;
+		<note>&lt;!-- bottom texts --&gt;</note>
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+		<p>Example:</p>
+        <pre class="code">
+&lt;div class="cover"&gt;
+	&lt;div class="inner"&gt;
+		&lt;div class="row"&gt;
+    		&lt;div class="col col-mp-10"&gt;
+            	&lt;h1 class="text-all-center"&gt;Cover Example&lt;/h1&gt;
+            	&lt;h2 class="text-all-center"&gt;This is the first roar from myself to the world&lt;/h2&gt;
+        	&lt;/div&gt;
+    	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+		<p>Example Result:</p>
+        </div>
+
+        
+        
+
+        <div class="cover">
+        	<div class="inner">
+        		<div class="row">
+            		<div class="col-mp-10">
+        				<h1 class="text-all-center">Cover Example</h1>
+                    	<h2 class="text-all-center">This is the first roar from myself to the world</h2>
+            		</div>
+            	</div>
+            </div>
+        </div>
+    
+    	<div class="container">
+        <h4>METERIOT Navbar</h4>
+        <p>METERIOT has set up a autosize navbar for you</p>
+        <p>Navbar is made up of a <code>navbar</code> tag</p>
+        <p>You can put:<code>navicon</code> tag, <code>div.row.navbar-row</code> element inside.</p>
+        <p>In the <code>.row.navbar-row</code> element, you need to put a <code>.container</code> element to set the width up.</p>
+        <p>In the element <code>.container</code>, there is <code>.col</code> element, what is to be noticed is that,<b>the <code>.col</code> element does not support the choosing of width as normal, but a special modificatory class <code>.col-navbar</code></b></p>
+        <p><code>.col</code> element's another modificatory class is <code>.col-navbrand</code>, which means is the title of the site</p>
+        <p>This is the basic structure for navbar</p>
+        <pre class="code">
+&lt;navbar <note>class="[Optional Theme Type] [navbar-fixed-top]"</note>&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	<var>[Brand Name]</var>
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link3&lt;/a&gt;
+            &lt;/div&gt;
+            ....[Can insert more]
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- This col will be put on the right --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/navbar&gt;
+<h4>..Or..[fixed on the bottom]</h4>
+&lt;navbar <note>class="[Optional Theme Type] [navbar-fixed-bottom]"</note>&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	<var>[Brand]</var>
+            &lt;/div&gt;
+            &lt;div class="col col-navbar <note>[col-navbar-current]</note>"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link3&lt;/a&gt;
+            &lt;/div&gt;
+            ....[Can insert more]
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- This col will be put on the right --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+&lt;/navbar&gt;</pre>
+		<p>Example code</p>
+        <pre class="code">
+&lt;navbar class="theme-color-blue-primary"&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	Brand
+            &lt;/div&gt;
+            &lt;div class="col col-navbar col-navbar-current"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link3&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- This col will be put on the right --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/navbar&gt;</pre>
+		<p>Result:</p>
+		<navbar class="theme-color-blue-primary">
+    <navicon></navicon>
+    <div class="row navbar-row">
+        <div class="container">
+            <div class="col col-navbar col-navbrand">
+            	Brand Name
+            </div>
+            <div class="col col-navbar col-navbar-current">
+            	<a href="#">Link1</a>
+            </div>
+            <div class="col col-navbar">
+            	<a href="#">Link2</a>
+            </div>
+            <div class="col col-navbar">
+            	<a href="#">Link3</a>
+            </div>
+            <div class="col col-navbar col-navbar-right"> 
+            	<!-- This col will be put on the right -->
+            	<a href="#">LinkRight</a>
+            </div>
+        </div>
+    </div>
+</navbar>
+		<br /><br />
+        <h4>parallel image effect</h4>
+       	<p>Using <code>.backgroundimg-para</code> class,you can turn a <code>.container-fluid</code> or <code>.container(Not recommended)</code> element's background image turn into a parallel mode</p>
+        <p class="notice">Please notice that you need to specify your <code>background-image</code> style value, or you will miss your background</p>
+        <p>Code Example</p>
+        <pre class="code">
+&lt;div class="backgroundimg-para" style="background-image:url(http://t2.27270.com/uploads/tu/201606/31/eg3ex3fuynh.jpg);"&gt;
+	&lt;p&gt;Here is an example&lt;/p&gt;	
+&lt;/div&gt;</pre>
+		<p>Example Results</p>
+		<div class="backgroundimg-para" style="background-image:url(http://t2.27270.com/uploads/tu/201606/31/eg3ex3fuynh.jpg);">
+			<p>Here is an example</p>	
+		</div>
+        <h4>What's more.</h4>
+        <p><code>.notice</code> class will enable you to give out a noticement</p>
+        <p>Example Code:</p>
+        <pre class="code">
+&lt;p class="notice"&gt;This is a notice Text&lt;/p&gt;</pre>
+		<p>The result:</p>
+        <p class="notice">This is a notice Text</p>
+        <h4>And here is buttons</h4>
+        <p>Use <code>.btn</code> can quickly and efficiently create pretty buttons</p>
+        <p>btn both provide <code>.btn-primary</code>,<code>.btn-success</code>,<code>.btn-warning</code> there types of sub-classes,enabling you to change color</p>
+        <p>Example Code:</p>
+        <pre class="code">
+&lt;a class="btn"&gt;Normal Btn&lt;/a&gt;
+&lt;a class="btn btn-primary"&gt;Blue Button&lt;/a&gt;
+&lt;a class="btn btn-success"&gt;Success Button&lt;/a&gt;
+&lt;a class="btn btn-warning"&gt;Warning Button&lt;/a&gt;
+&lt;a class="btn btn-cool"&gt;Cool Button&lt;/a&gt;</pre>
+		<p>Result:</p>
+		<a class="btn">Normal Btn</a>
+		<a class="btn btn-primary">Blue Button</a>
+		<a class="btn btn-success">Success Button</a>
+		<a class="btn btn-warning">Warning Button</a>
+        <a class="btn btn-cool">Cool Button</a>
+        <h4>It's not over, there's more!</h4>
+        <p>Collapse element - The element supports hide and show</p>
+        <p>Code Example:</p>
+        <pre class="code">
+&lt;div class="collapsecontainer"&gt;
+    &lt;div class="collapaser collapaser-pre-hidden"&gt;
+    	[Collapse Text]
+    &lt;/div&gt;
+    &lt;a class="btn btn-primary collapsecontroller"&gt;Click to collapse&lt;/a&gt;
+&lt;/div&gt;</pre>
+		<p>Result:</p>
+        <div class="collapsecontainer">
+    		<div class="collapaser collapaser-pre-hidden">
+    			[Collapse Text]
+    		</div>
+    		<a class="btn btn-primary collapsecontroller">Click to collapse</a>
+		</div>
+        <p>Also, METERIOT has helped you to beautify the inputs. Please feel free to use it.</p>
+        <p>That's probably the end</p>
+        </div>
+        
+    </body>
+</html>

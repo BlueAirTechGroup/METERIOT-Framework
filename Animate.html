@@ -1,0 +1,68 @@
+<html>
+	<head>
+    	<title>METERIOT - 流星网页动画</title>
+        <meta charset="gb2312" />
+        <meta name="keywords" content="流星网页,流星,网页框架,网页编程,网站制作" />
+        <meta name="description" content="流星网页框架是一款简单易用的易于制作网页的框架,此页是其子框架流星网页动画框架页面" />
+        <link type="text/css" href="css/METERIOT.main.css" rel="stylesheet" />
+        <link type="text/css" href="css/METERIOT.icons.css" rel="stylesheet" />
+        <link type="text/css" href="css/METERIOT.animate.css" rel="stylesheet" />
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script -->
+		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.js"></script -->
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.min.js"></script -->
+        <script src="js/METERIOTController.core.js"></script>
+ 		<meta name="author" content="秋风" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+    </head>
+    <body class="theme-color-black has-navbar-top scrollbar-dark">
+    	<navbar class="navbar-fixed-top theme-color-black">
+        	<navicon></navicon>
+            <div class="row navbar-row">
+            	<div class="container">
+                	<div class="col col-navbar col-navbrand">
+                    	METERIOT
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="Index.html">METERIOT介绍</a>
+                    </div>
+                    <div class="col col-navbar col-navbar-current">
+                    	动画子框架
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="METERIOT.zip" target="_blank">下载</a>
+                    </div>
+                    <div class="col col-navbar col-navbar-right">
+                    	<a href="http://www.xsyds.cn/Display_Ch.php">&lt;返回形随意动</a>
+                    </div>
+                </div>
+            </div>
+        </navbar>
+        <div class="container theme-color-black">
+        	<h1>使用动画框架,实现您想要的功能!</h1>
+            <p>动画子框架版本 0.0.101 ROTATING EDITION</p>
+            <p><a class="btn btn-primary meteriot-animate meteriot-animate-hover-zoomout">渐进放大</a></p>
+            <p><a class="btn btn-primary meteriot-animate meteriot-animate-hover-zoomin">渐进缩小</a></p>
+            <p><a class="meteriot-animate meteriot-animate-breathe">道法自然[呼吸]</a></p>
+            <p>心跳效果</p>
+            <p><img class="meteriot-animate meteriot-animate-jump" src="images/Heart.png" style="width:50px;height:50px;" /></p>
+            
+            <p>转动效果</p>
+            <p><img class="meteriot-animate meteriot-animate-rotating-slow shape-circled" src="images/Track.png" style="width:80px;height:80px;" /></p>
+            <h3>现在就开始吧...</h3>
+            <p>*METERIOT动画最低兼容IE10</p>
+            <p>要引用动画框架,请下载最新版本METERIOT后加入如下代码</p>
+            <pre class="code">
+&lt;link type="text/css" href="css/METERIOT.animate.css" rel="stylesheet" /&gt;</pre>
+			<p>如何使用?</p>
+            <p><code>.meteriot-animate</code>是您的基本类,需要在使用ANIMATE的对象的Class中每次声明</p>
+			<p><code>.meteriot-animate-hover-zoomout</code>子类提供了一个鼠标移动到上面就放大的功能</p>
+            <p><code>.meteriot-animate-hover-zoomin</code>子类提供了一个鼠标移动到上面就缩小的功能</p>
+            <p><code>.meteriot-animate-breathe</code>子类提供了一个呼吸效果</p>
+            <p><code>.meteriot-animate-jump</code>子类提供了一个心跳效果</p>
+            <p><code>.meteriot-animate-rotating-速度</code>子类提供了一个不断旋转的效果,速度分为[slow],[normal]和[fast]三种</p>
+        </div>
+    </body>
+</html>

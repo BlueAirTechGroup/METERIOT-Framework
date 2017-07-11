@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+	<head>
+    	<meta charset="gb2312" />
+        <title>METERIOT 1.0 用户手册</title>
+        <link type="text/css" href="css/METERIOT.main.css" rel="stylesheet" />
+        <link type="text/css" href="css/METERIOT.icons.css" rel="stylesheet" />
+        <link type="text/css" href="css/METERIOT.animate.css" rel="stylesheet" />
+        <script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script -->
+		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.js"></script -->
+		<!-- script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.slim.min.js"></script -->
+        <script src="js/METERIOTController.core.js"></script>
+ 		<meta name="author" content="秋风" />
+        <meta name="keywords" content="流星网页,流星,网页框架,网页编程,网站制作" />
+        <meta name="description" content="流星网页框架是一款简单易用的易于制作网页的框架,并且开源,此页您可以查阅用户手册和选择下载" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+	</head>
+    <body class="theme-color-black has-navbar-top scrollbar-dark">
+    	<navbar class="navbar-fixed-top theme-color-black">
+        	<navicon></navicon>
+            <div class="row navbar-row">
+            	<div class="container">
+                	<div class="col col-navbar col-navbrand">
+                    	METERIOT
+                    </div>
+                    <div class="col col-navbar col-navbar-current">
+                    	METERIOT介绍
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="Animate.html">动画子框架</a>
+                    </div>
+                    <div class="col col-navbar">
+                    	<a href="METERIOT.zip" target="_blank">下载</a>
+                    </div>
+                    <div class="col col-navbar col-navbar-right">
+                    	<a href="http://www.xsyds.cn/Display_Ch.php">&lt;返回形随意动</a>
+                    </div>
+                </div>
+            </div>
+        </navbar>
+        
+        <p class="notice">你好,欢迎来到流星世界!</p>
+        <div class="container-fluid theme-color-orange">
+        	<div class="container">
+            	<h3>流星网页框架[METERIOT]</h3>
+                <p>为了让所有形随意动旗下的网站实现统一且平滑,使其线条流畅,我们需要一款简单易用且流畅具体的网页框架</p>
+                <p>流星网页(METERIOT)框架即实现了这一个目标</p>
+                <p>METERIOT的优越特性包括:</p>
+                <p>1.给所有没有连接的a标签添加javascript:void(0);确保按钮整体性</p>
+                <p>2.对所有从0px到1600px的所有设备(包括手机,平板,电脑,大屏电脑)进行无缝自适应支持</p>
+                <p>3.对部分元素进行动态操作,不仅仅是一个css</p>
+                <p>4.对网页进行动态加载展示</p>
+                <p>而现在,METERIOT已经开源,但是请注意,您有有限的商业使用和修改权限</p>
+            </div>
+        </div>
+    	<div class="container-fluid theme-color-orange">
+        <div class="container">
+        	<p>您的版权包含:</p>
+            <p>1.在学习中查看,编辑其源码</p>
+            <p>2.在学习中使用此产品</p>
+            <p>您的权限不包含:</p>
+            <p>1.对其源码进行更改并发布在Internet上</p>
+            <p>2.对其进行商业使用,除非您与形随意动官方已经签署协议</p>
+            <br />
+            <p><b>额外注意事项:</b></p>
+            <p><b>任何更改本文档并发布的行为都将被追究侵权责任</b></p>
+            <p><b>您可以在外发布本文档的未修改版,但是请注意:必须标明来源地址</b></p>
+        </div>
+        </div>
+        <div class="container-fluid theme-color-blue-primary">
+        	<div class="container">
+        	<h5>信息</h5>
+           	<div class="row">
+            	<div class="col col-sscomp-4 col-comp-3">
+                	<p>作者</p>
+                    <p>秋风</p>
+                </div>
+                <div class="col col-sscomp-4 col-comp-3">
+                	<p>当前版本信息</p>
+                	<p>1.122.0001[Loading Page Optimization]</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+        	<h4>METERIOT使用手册</h4>
+            <p>要使用METERIOT,请在您的HTML的<code>&lt;head&gt;</code>标签中添加如下内容:</p>
+            <pre class="code">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+&lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;</pre>
+			<p>两句的意思是:由于METERIOT的移动设备优先特性,将禁止手机进行缩放页面操作,同时告知IE设置为EDGE渲染模式以提高兼容性</p>
+            <p>同时,为了引用METERIOT,您的<code>&lt;head&gt;</code>标签中也应该有如下代码:</p>
+            <pre class="code">
+&lt;script src="https://cdn.bootcss.com/jquery/3.1.1/core.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/METERIOTController.core.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" href="css/METERIOT.main.css" rel="stylesheet" /&gt;
+&lt;link type="text/css" href="css/METERIOT.icons.css" rel="stylesheet" /&gt;</pre>
+        	<p>请注意,上面代码的顺序不能上下颠倒,因为需要先调用JQuery,再调用METERIOT JS核心</p>
+            <br />
+            <h4>单元格系统</h4>
+            <p>METERIOT提供一个先进的自适应对其和大小分配系统,您可以使用这些来方便您的网页设计之旅</p>
+            <p>使用<code>uss</code>,<code>mp</code>,<code>sscomp</code>,<code>comp</code>,<code>bscomp</code>可以轻易地区分设备类型,然后给予各自不同的大小</p>
+        	<div class="container-fluid">
+            	<div class="row">
+                	<div class="col col-sscomp-2">样式</div>
+                	<div class="col col-sscomp-2">uss</div>
+                	<div class="col col-sscomp-2">mp</div>
+                	<div class="col col-sscomp-2">sscomp</div>
+                	<div class="col col-sscomp-2">comp</div>
+                	<div class="col col-sscomp-2">bscomp</div>
+                </div>
+                <div class="row">
+                	<div class="col col-sscomp-2">对应大小</div>
+                    <div class="col col-sscomp-2">0px - 200px</div>
+                    <div class="col col-sscomp-2">201px - 900px</div>
+                    <div class="col col-sscomp-2">901px - 1500px</div>
+                    <div class="col col-sscomp-2">1501px - 1800px</div>
+                    <div class="col col-sscomp-2"> &gt;= 1801px</div>
+                </div>
+                <div class="row">
+                	<div class="col col-sscomp-2">详细名称</div>
+                    <div class="col col-sscomp-2">超小屏</div>
+                    <div class="col col-sscomp-2">手机</div>
+                    <div class="col col-sscomp-2">小屏电脑</div>
+                    <div class="col col-sscomp-2">电脑</div>
+                    <div class="col col-sscomp-2">大屏电脑</div>
+                </div>
+            </div>
+        <p>单元格系统使用<code>.row</code>作为一行,同时使用<code>.col</code>作为一列</p>
+        <p>要自定义单元格宽度,需要使用<code>.col-样式-宽度</code></p>
+        <p>宽度是从1到12间的整数,使用12相当于占满</p>
+        <p>样式即从<code>uss</code>,<code>mp</code>,<code>sscomp</code>,<code>comp</code>,<code>bscomp</code>中选择</p>
+        <p class="notice">强烈建议在row外面添加一层container以调整屏幕间距</p>
+        <h6>例子1:</h6>
+        <pre class="code">
+        &lt;div class="container"&gt;
+        	&lt;div class="row"&gt;
+            	&lt;div class="col col-mp-12 col-comp-6 theme-color-blue-primary" style="height:40px;"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</pre>
+        <p>示例效果如下:</p>
+        	<div class="row">
+            	<div class="col col-mp-12 col-comp-6 theme-color-blue-primary" style="height:40px;">
+                </div>
+            </div>
+        <p>如果您当前使用的是电脑,您会看到只占了一半屏幕宽度的蓝色条,而如果是手机或平板,则是全部占满</p>
+        <br />
+        <h4>Cover - 独立整屏展示栏</h4>
+        <p>通过Cover,您可以给用户一个大气兼容的效果,Cover多用于网站首页,METERIOT的COVER支持嵌套式的使用</p>
+        <p>注意事项:METERIOT的COVER中默认全体文本和内容居中显示,但是嵌套中的内容为了自由性,您需要自己使用<code>.text-all-center</code></p>
+        <p>另外:在<code>.cover</code>中如果需要直接使用<code>.row</code>的话,推荐在<code>.row</code>外面包含一层<code>.inner</code>
+        <p>基本代码样式:</p>
+        <pre class="code">
+&lt;div class="cover"&gt;
+	&lt;div class="inner inner-top"&gt;
+		<note>&lt;!-- 顶端内容 --&gt;</note>
+	&lt;/div&gt;
+	&lt;div class="inner"&gt;
+		<note>&lt;!-- 居中内容 --&gt;</note>
+	&lt;/div&gt;
+	&lt;div class="inner inner-bottom"&gt;
+		<note>&lt;!-- 底部内容 --&gt;</note>
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+        <p>例子1:</p>
+        <pre class="code">
+&lt;div class="cover"&gt;
+	&lt;div class="inner"&gt;
+		&lt;div class="row"&gt;
+    		&lt;div class="col col-mp-10"&gt;
+            	&lt;h1 class="text-all-center"&gt;Cover展示&lt;/h1&gt;
+            	&lt;h2 class="text-all-center"&gt;这是我向世界的第一次呐喊&lt;/h2&gt;
+        	&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+		<p>示例结果:</p>
+        </div>
+        
+        <div class="cover">
+        	<div class="inner">
+        		<div class="row">
+            		<div class="col-mp-10">
+        				<h1 class="text-all-center">Cover展示</h1>
+                    	<h2 class="text-all-center">这是我向世界的第一次呐喊</h2>
+            		</div>
+            	</div>
+            </div>
+            <div class="inner inner-bottom">
+            	<h1>Bottom</h1>
+            </div>
+        </div>
+    
+    	<div class="container">
+        <h4>导航栏 METERIOT Navbar</h4>
+        <p>METERIOT设置了一个自适应导航栏</p>
+        <p>Navbar由一个<code>navbar</code>标签组成</p>
+        <p>内部可以放置:<code>navicon</code>标签,<code>div.row.navbar-row</code>元素</p>
+        <p>在<code>.row.navbar-row</code>元素中,需放置一个<code>.container</code>元素来实现大小调整</p>
+        <p><code>.container</code>元素中,是<code>.col</code>元素,值得注意的是,<b>这里的<code>.col</code>元素不包含宽度选择,而是有一个特定修饰类<code>.col-navbar</code></b></p>
+        <p><code>.col</code>的另一个特定修饰类为<code>.col-navbrand</code>,表示是网站标题</p>
+        <p>话不多说,直说用法吧</p>
+        <pre class="code">
+&lt;navbar <note>class="[可选Theme类型] [navbar-fixed-top]"</note>&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	<var>[商标名称]</var>
+            &lt;/div&gt;
+            &lt;div class="col col-navbar <note>[col-navbar-current]</note>"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link3&lt;/a&gt;
+            &lt;/div&gt;
+            ....[可插入许多]
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- 此导航栏将置于右边 --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/navbar&gt;
+<h4>..或..</h4>
+&lt;navbar <note>class="[可选Theme类型] [navbar-fixed-bottom]"</note>&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	<var>[商标名称]</var>
+            &lt;/div&gt;
+            &lt;div class="col col-navbar <note>[col-navbar-current]</note>"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a class="dropdowncontroller"&gt;Link3&lt;/a&gt;
+                &lt;div class="dropdownmenu"&gt;Dropdown&lt;/div&gt;
+            &lt;/div&gt;
+            ....[可插入许多]
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- 此导航栏将置于右边 --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+&lt;/navbar&gt;</pre>
+		<p>演示代码</p>
+        <pre class="code">
+&lt;navbar class="theme-color-blue-primary"&gt;
+    &lt;navicon&gt;&lt;/navicon&gt;
+    &lt;div class="row navbar-row"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="col col-navbar col-navbrand"&gt;
+            	商标名称
+            &lt;/div&gt;
+            &lt;div class="col col-navbar col-navbar-current"&gt;
+            	&lt;a href="#"&gt;Link1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a href="#"&gt;Link2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar"&gt;
+            	&lt;a class="dropdowncontroller"&gt;DropdownBTN&lt;/a&gt;
+                &lt;div class="dropdownmenu"&gt;Dropdown&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col col-navbar <note>col-navbar-right</note>"&gt; 
+            	<note>&lt;!-- 此导航栏将置于右边 --&gt;</note>
+            	&lt;a href="#"&gt;LinkRight&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/navbar&gt;</pre>
+		<p>演示结果:</p>
+		<navbar class="theme-color-blue-primary">
+    <navicon></navicon>
+    <div class="row navbar-row">
+        <div class="container">
+            <div class="col col-navbar col-navbrand">
+            	商标名称
+            </div>
+            <div class="col col-navbar col-navbar-current">
+            	<a href="#">Link1</a>
+            </div>
+            <div class="col col-navbar">
+            	<a href="#">Link2</a>
+            </div>
+            <div class="col col-navbar">
+            	<a class="dropdowncontroller">DropdownBTN</a>
+                <div class="dropdownmenu theme-color-blue-primary">
+                	Hi
+                </div>
+            </div>
+            <div class="col col-navbar col-navbar-right"> 
+            	<!-- 此导航栏将置于右边 -->
+            	<a href="#">LinkRight</a>
+            </div>
+        </div>
+    </div>
+</navbar>
+		
+		<br /><br />
+        <p>同时,在有修饰类<code>.navbar-fixed-top</code>的navbar后,可加上一个有修饰类<code>.after-navbar-fixed</code>的元素</p>
+        <h4>平行背景效果</h4>
+       	<p>使用<code>.backgroundimg-para</code>类,可以将一个<code>.container-fluid</code>或<code>.container(不推荐)</code>元素的背景图片设置为平行状态</p>
+        <p>请注意,您需要设置您的background-image样式,否则背景图片将不予显示</p>
+        <p>代码演示</p>
+        <pre class="code">
+&lt;div class="backgroundimg-para" style="background-image:url(http://t2.27270.com/uploads/tu/201606/31/eg3ex3fuynh.jpg);"&gt;
+	&lt;p&gt;这里是平行图片代码演示&lt;/p&gt;	
+&lt;/div&gt;</pre>
+		<p>演示结果</p>
+		<div class="backgroundimg-para" style="background-image:url(http://t2.27270.com/uploads/tu/201606/31/eg3ex3fuynh.jpg);">
+			<p>这里是平行图片代码演示</p>	
+		</div>
+        <h4>什么?还有更多?!</h4>
+        <p><code>.notice</code>类允许您输出一个提示信息</p>
+        <p>演示代码:</p>
+        <pre class="code">
+&lt;p class="notice"&gt;这是一个提示信息&lt;/p&gt;</pre>
+		<p>演示效果:</p>
+        <p class="notice">这是一个提示信息</p>
+        <h4>按钮将继续接力</h4>
+        <p>使用<code>.btn</code>将能够快速高效的创建漂亮的按钮</p>
+        <p>btn同时提供<code>.btn-primary</code>,<code>.btn-success</code>,<code>.btn-warning</code>三种修饰类,供您修改配色</p>
+        <p>示例代码:</p>
+        <pre class="code">
+&lt;a class="btn"&gt;普通按钮演示&lt;/a&gt;
+&lt;a class="btn btn-primary"&gt;蓝色按钮演示&lt;/a&gt;
+&lt;a class="btn btn-success"&gt;绿色按钮展示&lt;/a&gt;
+&lt;a class="btn btn-warning"&gt;红色按钮展示&lt;/a&gt;
+&lt;a class="btn btn-cool"&gt;帅气按钮演示&lt;/a&gt;</pre>
+		<p>演示效果:</p>
+        <a class="btn">普通按钮演示</a>
+		<a class="btn btn-primary">蓝色按钮演示</a>
+		<a class="btn btn-success">绿色按钮展示</a>
+		<a class="btn btn-warning">红色按钮展示</a>
+        <a class="btn btn-cool">帅气按钮演示</a>
+        <h4>没完没了 还有更多</h4>
+        <p>Collapse元素 - 支持收起跳出的元素</p>
+        <p>代码演示:</p>
+        <pre class="code">
+&lt;div class="collapsecontainer"&gt;
+    &lt;div class="collapaser collapaser-pre-hidden"&gt;
+    	[收缩文本]
+    &lt;/div&gt;
+    &lt;a class="btn btn-primary collapsecontroller"&gt;点击收起或放开&lt;/a&gt;
+&lt;/div&gt;</pre>
+		<p>示例效果:</p>
+        <div class="collapsecontainer">
+    		<div class="collapaser collapaser-pre-hidden">
+    			[收缩文本]
+    		</div>
+    		<a class="btn btn-primary collapsecontroller">点击收起或放开</a>
+		</div>
+        <p>同时,METERIOT已经帮您自动美化了Input标签,请尽情使用吧!</p>
+        最后:非常感谢您的阅读,江湖不远,天涯再见
+        </div>
+        
+    </body>
+</html>
