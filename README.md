@@ -1,5 +1,7 @@
 # METERIOT-Framework
 A shit-like website framework (because it look really weired)<br />
+No LONGER MAINTAINED 不再维护<br />
+New framework see <a href="https://github.com/BlueAirTechGroup/Boost-Framework">Boost Framework</a><br />
 To use it, put these codes inside the <head> tag<br />
 <br />
 \<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><br />
